@@ -1,0 +1,30 @@
+#配置端口号
+server:
+  port: 1990
+
+# 模板配置
+thymeleaf:
+  suffix: .html
+  prefix: classpath:/templates/
+  enabled: true
+  cache: false
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.entity
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+
+#mysql
+spring:
+  datasource:  #mysql数据库配置配置
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///localhost?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+
